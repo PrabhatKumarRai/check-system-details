@@ -155,7 +155,7 @@
                     foreach( $csd_plugin_details as $csd_field => $csd_value):
                         ?>
                         <tr>
-                            <td><a href="<?php echo $csd_value['PluginURI']; ?>" target="_blank"><?php echo esc_html( $csd_value['Name'] ); ?></a></td>
+                            <td><a href="<?php echo esc_url($csd_value['PluginURI']); ?>" target="_blank"><?php echo esc_html( $csd_value['Name'] ); ?></a></td>
                             <td>version <?php echo esc_html( $csd_value['Version'] ); ?></td>
                             <td>by <a href="<?php echo esc_url($csd_value['AuthorURI']); ?>" target="_blank"><?php echo esc_html( $csd_value['Author'] ); ?></a></td>
                         </tr>
