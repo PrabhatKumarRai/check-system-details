@@ -64,8 +64,8 @@
                     foreach($csd_wordpress_details as $csd_field => $csd_value):
                         ?>
                         <tr>
-                            <td><?= esc_html( $csd_field ); ?></td>
-                            <td><?= esc_html( $csd_value ); ?></td>
+                            <td><?php echo esc_html( $csd_field ); ?></td>
+                            <td><?php echo esc_html( $csd_value ); ?></td>
                         </tr>
                         <?php
                     endforeach;
@@ -80,8 +80,8 @@
                     foreach($csd_server_details as $csd_field => $csd_value):
                         ?>
                         <tr>
-                            <td><?= esc_html( $csd_field ); ?></td>
-                            <td><?= esc_html( $csd_value ); ?></td>
+                            <td><?php echo esc_html( $csd_field ); ?></td>
+                            <td><?php echo esc_html( $csd_value ); ?></td>
                         </tr>
                         <?php
                     endforeach;
@@ -96,8 +96,8 @@
                     foreach($csd_database_details as $csd_field => $csd_value):
                         ?>
                         <tr>
-                            <td><?= esc_html( $csd_field ); ?></td>
-                            <td><?= esc_html( $csd_value ); ?></td>
+                            <td><?php echo esc_html( $csd_field ); ?></td>
+                            <td><?php echo esc_html( $csd_value ); ?></td>
                         </tr>
                         <?php
                     endforeach;
@@ -113,7 +113,7 @@
                         foreach ($csd_table as $csd_t):
                             ?>
                             <tr>
-                                <td><?= esc_html( $csd_t ); ?></td>
+                                <td><?php echo esc_html( $csd_t ); ?></td>
                             </tr>
                             <?php
                         endforeach;
@@ -130,10 +130,8 @@
                         if( $csd_field !== 'Author' && $csd_field !== 'AuthorURI' ):
                         ?>
                         <tr>
-                            <td><?= esc_html( $csd_field ); ?></td>
-                            <td>
-                                <?= esc_html( $csd_value ); ?>
-                            </td>
+                            <td><?php echo esc_html( $csd_field ); ?></td>
+                            <td><?php echo esc_html( $csd_value ); ?></td>
                         </tr>
                         <?php
                         endif;
@@ -142,7 +140,7 @@
                     <tr>
                         <td>Author</td>
                         <td>
-                            <a href="<?= esc_url($csd_theme_details['AuthorURI']) ?>"><?= esc_html( $csd_theme_details['Author'] ); ?></a>
+                            <a href="<?php echo esc_url($csd_theme_details['AuthorURI']); ?>" target="_blank"><?php echo esc_html( $csd_theme_details['Author'] ); ?></a>
                         </td>
                     </tr>
                     <?php
@@ -157,9 +155,9 @@
                     foreach( $csd_plugin_details as $csd_field => $csd_value):
                         ?>
                         <tr>
-                            <td><a href="<?= $csd_value['PluginURI'] ?>"><?= esc_html( $csd_value['Name'] ); ?></a></td>
-                            <td>version <?= esc_html( $csd_value['Version'] ); ?></td>
-                            <td>by <a href="<?= esc_url($csd_value['AuthorURI']); ?>" target="_blank"><?= esc_html( $csd_value['Author'] ); ?></a></td>
+                            <td><a href="<?php echo $csd_value['PluginURI']; ?>" target="_blank"><?php echo esc_html( $csd_value['Name'] ); ?></a></td>
+                            <td>version <?php echo esc_html( $csd_value['Version'] ); ?></td>
+                            <td>by <a href="<?php echo esc_url($csd_value['AuthorURI']); ?>" target="_blank"><?php echo esc_html( $csd_value['Author'] ); ?></a></td>
                         </tr>
                         <?php
                     endforeach;
