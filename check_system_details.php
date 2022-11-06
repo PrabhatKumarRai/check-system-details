@@ -3,7 +3,7 @@
  * Plugin Name:       Check System Details
  * Plugin URI:        https://github.com/PrabhatKumarRai/check-system-details
  * Description:       Easily check your WordPress installation and server details along with database tables, installed plugins, and the active theme.
- * Version:           1.1.0
+ * Version:           1.0.0
  * Author:            Prabhat Rai
  * Author URI:        https://github.com/PrabhatKumarRai/
  * License:           GPL-2.0+
@@ -20,22 +20,22 @@ function check_system_details_menu(){
         'System Details',
         'administrator',
         'check_system_details',
-        'check_system_details_view',
+        'check_system_details_data',
         'dashicons-admin-settings'
     );
 }
 
-function check_system_details_view(){
-    require_once plugin_dir_path(__FILE__) . 'admin/check_system_details_view.php';
+function check_system_details_data(){
+    include_once plugin_dir_path(__FILE__) . 'admin/check_system_details_data.php';
 }
 
 // CSS for the plugin page
 function check_system_details_css(){
     echo "<style type='text/css'>
     .check-system-details-container{
-        padding: 25px 25px 0 25px;
-        margin-left: -25px;
-        margin-top: -16px;
+    padding: 25px 25px 0 25px;
+    margin-left: -25px;
+    margin-top: -16px;
     }
     .check-system-details-head{
         position: relative;
@@ -52,40 +52,29 @@ function check_system_details_css(){
         text-decoration: underline;
         text-align: center;
     }
-
+    .check-system-details-container h2{
+        padding: 10px;
+        margin-bottom: 0;
+        border: 1px solid black;
+        border-bottom: 0;
+    }
     .check-system-details-section{
         background-color: #fff;
+    }
+    .check-system-details-container table{
         border: 1px solid black;
-        margin-bottom: 30px;
-    }
-    .check-system-details-section-head{
-        padding: 10px;
-        margin: 0;
-        border-bottom: 1px solid black;
-    }
-    .check-system-details-section-body{
-        padding: 5px;
-    }
-    
-    .check-system-details-section-body * {
-        font-size: 16px;
-        font-family: inherit;  
-    }
-    .check-system-details-section table{
         width: 100%;
+        margin-bottom: 30px;
+        padding: 5px;
         word-break: break-all;
     }
-    .check-system-details-section table td{
+    .check-system-details-container table td{
         padding: 5px;
+        font-size: 16px;
         width: 50%;
     }
     .check-system-details-plugin-details table td{
         width: unset;
-    }
-    .check-system-details-section pre,
-    .check-system-details-section p{
-        margin: 0;
-        padding: 6px 5px;      
     }
     </style>";
 }
