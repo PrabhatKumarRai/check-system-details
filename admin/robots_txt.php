@@ -22,7 +22,7 @@
         }
     }
     else{
-        $robots = $get_robots;
+        $robots = $get_robots['body'];
     }
 ?>
 
