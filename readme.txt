@@ -1,19 +1,19 @@
 === Check System Details ===
 Contributors: prabhatrai
-Tags: server details,wordpress details,database details
+Tags: server details,wordpress details,database details,robots.txt,htaccess,debug log
 Requires at least: 4.7
-Tested up to: 6.0.2
-Stable tag: 1.0.0
+Tested up to: 6.1
+Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily check your WordPress installation and server details along with database tables, installed plugins, and the active theme.
 
-== Description =
+== Description ==
 ### Check System Details - Easily Check Your Installation and Server Details ###
 
-##No Setup Required##
+##**No Setup Required**##
 
 ## The details include:  ##
 
@@ -27,6 +27,17 @@ Easily check your WordPress installation and server details along with database 
 * WordPress debug
 * WordPress cron
 * WordPress Language
+
+#Current Theme Details#
+* Name
+* Version
+* Description
+* Author
+
+#Installed Plugin Details#
+* Plugin name with hyperlink to plugin's website
+* Version
+* Author
 
 #Server Details#
 * Max input timeout
@@ -42,16 +53,13 @@ Easily check your WordPress installation and server details along with database 
 
 #Names of existing Database Tables#
 
-#Current Theme Details#
-* Name
-* Version
-* Description
-* Author
+##New Addition##
 
-#Installed Plugin Details#
-* Plugin name with hyperlink to plugin's website
-* Version
-* Author
+#htaccess File Content#
+
+#Robots.txt Content#
+
+#Debug log content - Last 100 lines#
 
 ##A quick overview of the plugin:##
 [youtube https://youtu.be/VTXt1PNqXkU]
@@ -62,6 +70,11 @@ Easily check your WordPress installation and server details along with database 
 3. Details on the active theme and installed plugins.
 
 == Changelog ==
+
+= 1.1.0 =
+* htaccess File Content
+* Robots.txt Content
+* Debug log content - Last 100 lines
 
 = 1.0.0 =
 * Initial version
