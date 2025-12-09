@@ -1,6 +1,7 @@
 <div class="check-system-details-container">
     <div class="check-system-details-head">
         <h1 class="check-system-details-title">Check System Details</h1>
+        <br>
     </div>
     <div class="check-system-details-body">        
     

@@ -2,7 +2,7 @@
 Contributors: prabhatrai
 Tags: server details,wordpress details,database details,robots.txt,htaccess,debug log
 Requires at least: 4.7
-Tested up to: 6.1
+Tested up to: 6.9
 Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPL-2.0+
