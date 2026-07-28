@@ -24,9 +24,9 @@
 ?>
 
 <!-- Server Details -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">Server Details</h2>
-    <div class="check-system-details-section-body">
+<div class="csd-section">
+    <h2 class="csd-section-head">Server Details</h2>
+    <div class="csd-section-body">
         <table>
             <?php     
                 foreach($csd_server_details as $csd_field => $csd_value):
@@ -43,9 +43,9 @@
 </div>
 
 <!-- Database Details -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">Database Details</h2>
-    <div class="check-system-details-section-body">
+<div class="csd-section">
+    <h2 class="csd-section-head">Database Details</h2>
+    <div class="csd-section-body">
         <table>
             <?php
                 foreach($csd_database_details as $csd_field => $csd_value):
@@ -62,9 +62,9 @@
 </div>
 
 <!-- Database Tables -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">Database Tables</h2>
-    <div class="check-system-details-section-body">
+<div class="csd-section">
+    <h2 class="csd-section-head">Database Tables</h2>
+    <div class="csd-section-body">
         <table>
             <?php
                 foreach ($csd_tables as $csd_table):

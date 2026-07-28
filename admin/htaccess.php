@@ -12,9 +12,9 @@ else{
 ?>
 
 <!-- .htaccess -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">htaccess file Content</h2>
-    <div class="check-system-details-section-body">
-        <pre><?php echo $htaccess; ?></pre>
+<div class="csd-section">
+    <h2 class="csd-section-head">htaccess file Content</h2>
+    <div class="csd-section-body">
+        <pre><?php echo esc_html( $htaccess ); ?></pre>
     </div>
 </div>

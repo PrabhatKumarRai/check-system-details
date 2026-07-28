@@ -30,9 +30,9 @@
 ?>
 
 <!-- WordPress Details -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">WordPress Details</h2>
-    <div class="check-system-details-section-body">
+<div class="csd-section">
+    <h2 class="csd-section-head">WordPress Details</h2>
+    <div class="csd-section-body">
         <table>
             <?php     
                 foreach($csd_wordpress_details as $csd_field => $csd_value):
@@ -49,9 +49,9 @@
 </div>
 
 <!-- Active Theme Details -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">Current Theme</h2>
-    <div class="check-system-details-section-body">
+<div class="csd-section">
+    <h2 class="csd-section-head">Current Theme</h2>
+    <div class="csd-section-body">
         <table>
             <?php     
                 foreach($csd_theme_details as $csd_field => $csd_value):
@@ -78,9 +78,9 @@
 </div>
 
 <!-- Installed Plugin Details -->
-<div class="check-system-details-section check-system-details-plugin-details">
-    <h2 class="check-system-details-section-head">Installed Plugins</h2>
-    <div class="check-system-details-section-body">
+<div class="csd-section csd-plugin-details">
+    <h2 class="csd-section-head">Installed Plugins</h2>
+    <div class="csd-section-body">
         <table>
             <?php                
                 foreach( $csd_plugin_details as $csd_field => $csd_value):

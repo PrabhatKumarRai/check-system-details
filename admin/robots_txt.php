@@ -16,9 +16,9 @@
     $robots = '';
 
     if( false !== array_key_exists("errors", $get_robots) ){
-        $robots = 'Error fetching robots.txt!';
+        $robots = "Error fetching robots.txt!\n";
         foreach($get_robots["errors"] as $error => $value){
-            $robots .= '<br>Error: ' . $error . ' ' . $value[0];
+            $robots .= "Error: {$error} {$value[0]}\n";
         }
     }
     else{
@@ -27,9 +27,9 @@
 ?>
 
 <!-- Robots.txt -->
-<div class="check-system-details-section">
-    <h2 class="check-system-details-section-head">Robots.txt Content</h2>
-    <div class="check-system-details-section-body">
-        <pre><?php echo $robots; ?></pre>
+<div class="csd-section">
+    <h2 class="csd-section-head">Robots.txt Content</h2>
+    <div class="csd-section-body">
+        <pre><?php echo esc_html( $robots ); ?></pre>
     </div>
 </div>

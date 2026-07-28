@@ -3,7 +3,7 @@ Contributors: prabhatrai
 Tags: server details,wordpress details,database details,robots.txt,htaccess,debug log
 Requires at least: 4.7
 Tested up to: 6.1
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 7.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -70,6 +70,12 @@ Easily check your WordPress installation and server details along with database 
 3. Details on the active theme and installed plugins.
 
 == Changelog ==
+
+= 1.2.0 =
+* Revamped UI with tabs (WordPress / Server & Database / Files & Logs) instead of one long page
+* Copy Report and Download Report (.txt) buttons for easy support handoff
+* Fixed admin menu capability check (now correctly requires manage_options)
+* Hardened output escaping for .htaccess, robots.txt, and debug.log content
 
 = 1.1.0 =
 * htaccess File Content
