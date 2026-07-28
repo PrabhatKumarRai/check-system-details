@@ -8,7 +8,7 @@ Requires PHP: 7.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Puts your WordPress, server, and database details in one place, flags real problems instead of just listing facts, and gives you tools to test, snapshot, and report on your site.
+Flags real WordPress problems and puts your WordPress, server, and database details in one place, with tools to test, snapshot, and report.
 
 == Description ==
 
