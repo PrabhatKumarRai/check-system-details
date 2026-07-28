@@ -9,6 +9,10 @@ A WordPress admin plugin that reports your site's WordPress, server, and databas
 
 **WordPress.org plugin page:** https://wordpress.org/plugins/check-system-details/
 
+## Video Walkthrough
+
+[![Watch the video walkthrough](https://img.youtube.com/vi/ahIiwA-aIxk/maxresdefault.jpg)](https://youtu.be/ahIiwA-aIxk)
+
 ## Features
 
 **Health Check**
