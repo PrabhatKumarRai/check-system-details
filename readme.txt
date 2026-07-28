@@ -54,7 +54,7 @@ Reference tabs with tooltips explaining every field:
 * Translation-ready
 
 = A quick overview of the plugin =
-[youtube https://youtu.be/VTXt1PNqXkU]
+[youtube https://youtu.be/ahIiwA-aIxk]
 
 == Screenshots ==
 1. The Health Check tab, flagging real problems (PHP version, caching, security settings) instead of just listing facts.
