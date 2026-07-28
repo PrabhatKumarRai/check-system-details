@@ -10,7 +10,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .csd-header h1 {
@@ -33,9 +33,9 @@
     background: #1d2327;
     color: #fff;
     padding: 10px 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 13px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;
@@ -44,6 +44,50 @@
 
 .csd-toast.is-visible {
     opacity: 1;
+}
+
+/* Modern tab bar - replaces WordPress core's boxy default nav-tab look */
+.csd-wrap .nav-tab-wrapper {
+    border-bottom: 1px solid #dcdcde;
+    margin: 0 0 24px;
+    padding-bottom: 0;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.csd-wrap .nav-tab {
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 6px 6px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #50575e;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.csd-wrap .nav-tab:hover {
+    color: #1d2327;
+    background: #f0f0f1;
+}
+
+.csd-wrap .nav-tab:focus {
+    box-shadow: none;
+    outline: 2px solid #2271b1;
+    outline-offset: -2px;
+}
+
+.csd-wrap .nav-tab-active,
+.csd-wrap .nav-tab-active:hover {
+    color: #2271b1;
+    background: transparent;
+    border-bottom-color: #2271b1;
+    font-weight: 600;
 }
 
 .csd-tab-panel {
@@ -56,21 +100,177 @@
 
 .csd-section {
     background: #fff;
-    border: 1px solid #c3c4c7;
-    border-radius: 4px;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
     margin-bottom: 20px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .csd-section-head {
     margin: 0;
-    padding: 12px 16px;
-    border-bottom: 1px solid #c3c4c7;
+    padding: 14px 16px;
+    border-bottom: 1px solid #dcdcde;
     font-size: 14px;
 }
 
+.csd-section-head-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.csd-summary {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.csd-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.csd-summary .csd-pill {
+    margin-right: 0;
+}
+
+.csd-pill-good {
+    background: #d4f7dc;
+    color: #006b2d;
+}
+
+.csd-pill-warning {
+    background: #fff3cd;
+    color: #8a6100;
+}
+
+.csd-pill-critical {
+    background: #f8d7da;
+    color: #8a1c1c;
+}
+
+.csd-pill-info {
+    background: #e5e5e5;
+    color: #3c434a;
+}
+
+.csd-update-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #fff3cd;
+    color: #8a6100;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.csd-update-badge:hover,
+.csd-update-badge:focus {
+    background: #ffe8a1;
+    color: #6b4a00;
+}
+
+.csd-health-icon {
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
+/* Custom tooltip: a help icon that shows a styled bubble on hover, focus,
+   or click (native `title` tooltips are inconsistent across browsers and
+   don't work well on touch devices, so this is CSS + a little JS instead). */
+.csd-tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    font-size: 15px;
+    color: #8c8f94;
+    cursor: help;
+    vertical-align: middle;
+}
+
+.csd-tooltip:hover,
+.csd-tooltip:focus,
+.csd-tooltip.is-active {
+    color: #2271b1;
+    outline: none;
+}
+
+.csd-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    width: max-content;
+    max-width: 260px;
+    background: #fff;
+    color: #1d2327;
+    border: 1px solid #dcdcde;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: normal;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 100000;
+    pointer-events: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.csd-tooltip:hover::after,
+.csd-tooltip:focus::after,
+.csd-tooltip.is-active::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.csd-section .csd-health-icon.csd-health-icon-good {
+    color: #00a32a;
+}
+
+.csd-section .csd-health-icon.csd-health-icon-warning {
+    color: #dba617;
+}
+
+.csd-section .csd-health-icon.csd-health-icon-critical {
+    color: #d63638;
+}
+
+.csd-section .csd-health-icon.csd-health-icon-info {
+    color: #787c82;
+}
+
 .csd-section-body {
-    padding: 4px 16px;
+    padding: 16px;
+}
+
+.csd-section-body > *:first-child {
+    margin-top: 0;
+}
+
+.csd-section-body > *:last-child {
+    margin-bottom: 0;
 }
 
 .csd-section table {
@@ -87,7 +287,7 @@
 }
 
 .csd-section table td {
-    padding: 8px;
+    padding: 10px 16px;
     word-break: break-word;
     vertical-align: top;
 }
@@ -107,6 +307,7 @@
     margin: 0;
     padding: 12px;
     background: #f6f7f7;
+    border-radius: 4px;
     overflow: auto;
     max-height: 400px;
     font-size: 13px;
@@ -115,14 +316,42 @@
 }
 
 .csd-section p {
-    margin: 0;
-    padding: 12px 0;
+    margin: 0 0 12px;
+}
+
+.csd-section hr {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid #f0f0f1;
 }
 
 .csd-report-textarea {
     position: absolute;
     left: -9999px;
     top: -9999px;
+}
+
+.csd-tools-result {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.csd-tools-result-success {
+    color: #006b2d;
+}
+
+.csd-tools-result-error {
+    color: #8a1c1c;
+}
+
+.csd-snapshot-diff {
+    margin-top: 12px;
+    overflow-x: auto;
+}
+
+.csd-snapshot-diff table.diff {
+    width: 100%;
 }
 
 .csd-footer {
